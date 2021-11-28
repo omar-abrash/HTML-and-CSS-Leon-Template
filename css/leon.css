@@ -1,0 +1,517 @@
+/* global rules  */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    /* min-height: 2000px; */
+   font-family: 'Work Sans', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* css color variables  */
+:root {
+    --even-bg-color  :#FAFAFA ;
+    --h3-color       : #EBECED;
+    --icon-color     : #10CAB7;
+    --contact-color  :#2C4755; 
+
+}
+/* prepare the container */
+.container {
+    width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* prepare the container media queiry  (bootstrap) */
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .container {
+        width: 350px;
+    }
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .container {
+        width: 550px;
+    }
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .container {
+        width: 750px;
+    }
+}
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .container {
+        width: 950px;
+    }
+}
+/* global rule  */
+.center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.h3-desgin {
+    font-size: 120px;
+    font-weight:800;
+    letter-spacing: -5px;
+    color: var(--h3-color);
+    margin: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.p-h3-desgin {
+    margin-top: -140PX;
+}
+.text {
+    text-align: center;
+    margin-bottom: 100px;
+}
+@media (max-width: 575.98px) { 
+.text .h3-desgin {
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+.text .h3-desgin {
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+}
+/* end global rule */
+
+/* :::::::::::::::::::::::::::::::::::  */
+
+/* start for header part  */
+header {
+    background-color: white;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+.container .logo {
+    height: 60px;
+    margin-left: -50px;
+    cursor:pointer;
+} 
+.icon-list i {
+    font-size: 40px;
+    padding-top: 10px;
+    cursor:pointer;
+}
+.icon-list ul {
+    display: none;
+    list-style: none;
+    background-color: transparent;
+    width: 300px;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: -265px;
+}
+.icon-list ul li {
+    background-color:var(--icon-color);
+    margin-bottom: 5px ;
+    font-size: 25px;
+    cursor: pointer;
+    padding-left: 10px;
+    transition: 0.3s;
+}
+.icon-list li:hover {
+    transform: translateX(12px);
+}
+.icon-list a {
+    text-decoration: none;
+}
+.icon-list:hover ul {
+    display: block;
+}
+/* end the header part  */
+
+/* :::::::::::::::::::::::::::::::  */
+
+/* start the main heading section  */
+.main-heading {  /* we add global rule hear .center-column */
+    background-image: url('../images/mountain.jpg');
+    height: 800px;
+    background-position: center;
+    background-size: cover;
+}
+.main-heading h1 {
+    color: var(--icon-color);
+    font-size: 38px;
+    font-weight: 800;
+}
+.main-heading p {
+    max-width: 300px;
+    font-weight: 500;
+}
+/* End the main heading section  */
+
+/* :::::::::::::::::::::::::::::::  */
+
+/* start the services part  */
+
+/* first three parts div  */
+.serv .three-parts {
+    padding-top: 60px;
+    justify-content: space-evenly !important;
+}
+@media (max-width: 575.98px) { 
+.serv .three-parts {
+    flex-direction: column;
+}
+.serv .three-parts div:not(:nth-child(3)) {
+    padding-bottom: 30px;
+}
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+.serv .three-parts {
+    flex-direction: column;
+}
+.serv .three-parts div:not(:nth-child(3)) {
+    padding-bottom: 30px;
+}
+}
+.three-parts i {
+    color: var(--icon-color);
+    font-size: 60px;
+}
+.three-parts h2 {
+    font-weight: 800;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+.three-parts p {
+    font-weight: 500;
+    max-width: 400px;
+}
+/* second text part div  */
+
+/* third part (four divs and images) */
+.four-parts-image {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 100px;
+}
+.four-parts-image i {
+    font-size: 40px;
+    color: var(--icon-color);
+    float: left;
+    margin-left: -70px;
+}
+.four-parts-image p {
+    max-width: 300px;
+}
+.four-parts-image .image {
+    position: relative;
+    margin-top: 50px;
+}
+@media (max-width: 575.98px) { 
+.four-parts-image .image {
+    display: none;
+}
+.four-parts-image {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 100px;
+}
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+.four-parts-image .image {
+    display: none;
+}
+.four-parts-image {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 100px;
+}
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+.four-parts-image .image {
+    display: none;
+}
+.four-parts-image {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 100px;
+}
+}
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+.four-parts-image .image {
+    display: none;
+}
+}
+
+.four-parts-image .image::after {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: calc(330px + 50px);
+    top:-25px;
+    right: -30px;
+    background-color: var(--contact-color);
+    z-index: -1;
+}
+/* End the services part  */
+
+/* :::::::::::::::::::::::::::::::::::::::::::: */
+
+/* start the protofolio  */
+.portfolio {
+    background-color: var(--even-bg-color);
+    padding-bottom: 40px;
+}
+.portfolio .three-parts {
+    display: flex;
+    justify-content:space-between;
+}
+@media (max-width: 575.98px) { 
+.portfolio .three-parts {
+    flex-direction: column;
+}
+.portfolio .three-parts div {
+    border: 2px dashed var(--icon-color);
+    margin-bottom: 10px;
+}
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+.portfolio .three-parts {
+    flex-direction: column;
+}
+.portfolio .three-parts div {
+    border: 2px dashed var(--icon-color);
+    margin-bottom: 10px;
+}
+}
+
+.portfolio .three-parts div {
+    flex-basis: calc(100%/3 - 50px);
+}
+.portfolio .three-parts img {
+    width: calc(100%);
+}
+.portfolio .butt {
+    display: block;
+    border: 2px solid black;
+    width: 200px;
+    height: 50px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* End the protofolio  */
+
+/* :::::::::::::::::::::::::::::::::  */
+
+/* start the about section  */
+.about-section {
+    padding-bottom: 100px;
+}
+.about-section .second-part {
+    display: flex;
+    justify-content: space-between;
+}
+.second-part .image-part {
+    display: flex;
+    
+}
+
+.second-part .image-part .befor-image {
+    width: 100px;
+    height: 400px;
+    background-color: var(--h3-color);
+    margin-top: -50px;
+}
+.second-part .image-part .image {
+    margin-left: -50px;
+    position: relative;
+}
+.second-part .image-part .image::before {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 80%;
+    background-color:var(--icon-color);
+    left: 240px;
+    top: -30px;
+    z-index: -1;
+}
+.second-part .image-part .image::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 20%;
+    background-color:var(--icon-color);
+    left: 240px;
+      top: 195px;
+    z-index: -1;
+}
+.second-part .two-text p {
+    max-width: 450px;
+}
+.second-part hr {
+    width: 50%;
+    float: left;
+    height: 2px;
+    background-color: var(--icon-color);
+
+}
+.about-section .two-text p:first-child{
+    font-weight:bolder;
+}
+
+@media (max-width: 575.98px) { 
+.second-part .image-part {
+    display: none;
+}
+.about-section .second-part {
+    justify-content: center;
+        text-align: center;
+}
+.second-part hr {
+    width: 100%;
+}
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+.second-part .image-part {
+    display: none;
+}
+.about-section .second-part {
+    justify-content: center;
+        text-align: center;
+}
+.second-part hr {
+    width: 100%;
+}
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+.second-part .image-part {
+    display: none;
+}
+.about-section .second-part {
+    justify-content: center;
+    text-align: center;
+}
+.second-part hr {
+    width: 100%;
+}
+}
+/* End the about section  */
+/* :::::::::::::::::::::::::::::::::::::::::::::  */
+/* start the contact part  */
+.contact-section {
+    background-color:var(--even-bg-color);
+}
+.contact-section h2:nth-child(1) {
+    font-size: 50px;
+    color: var(--contact-color);
+
+}
+.contact-section h2:nth-child(2){
+    font-size: 40px;
+    color: var(--icon-color);
+    padding-left: 30px;
+    margin-top: -40px;
+}
+.contact-section .contact-list {
+    display: flex;
+}
+.contact-section .contact-list p {
+    min-width: 220px;
+}
+.contact-section .contact-list ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 100px;
+    flex-shrink: 1;
+    display: flex;
+    list-style: none;
+}
+.contact-list ul li {
+    padding: 15px;
+}
+.contact-list li i {
+    font-size: 23px;
+
+    color: var(--contact-color);
+}
+
+@media (max-width: 575.98px) { 
+.contact-section h2:nth-child(1) {
+    font-size: 20px;
+} 
+.contact-section h2:nth-child(2) {
+    font-size: 15px;
+    margin: 0;
+} 
+.contact-section .contact-list ul {
+    padding-left: 10px;
+}
+.contact-list ul li {
+    padding: 5px;
+    padding-top: 15px;
+}
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+.contact-section h2:nth-child(1) {
+    font-size: 30px;
+} 
+.contact-section h2:nth-child(2) {
+    font-size: 25px;
+    margin: 0;
+} 
+}
+/* End the contact part  */
+
+/* :::::::::::::::::::::::::::::::::::::  */
+
+/* start the footer part */
+.footer {
+    background-color: var(--contact-color);
+    height: 80px;
+}
+.footer .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .container h6 {
+    margin:0;
+    font-size: 10px;
+    color: white;
+}
+.footer .container span {
+    color: var(--icon-color);
+}
+/* End the footer part */
